@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Custom Properties */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Roboto', sans-serif;
+    --fw-regular: 300;
+    --fw-bold: 900;
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width:800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General Styles */
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+strong {
+    font-weight: var(--fw-bold);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-accent);
+}
+
+a:hover {
+    color: var(--clr-dark);
+}
+
+/* Top Section Styles */
+
+.top-section {
+    background-color: bisque;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+}
+
+.top-section a {
+    color: var(--clr-dark);
+}
+
+.top-section a:hover {
+    color: var(--clr-accent);
+}
+
+.top-section a+a {
+    margin-left: 1em;
+}
+
+/* Skill Section Styles */
+
+.skill-section {
+    background-color: bisque;
+}
+
+.skill-section ul {
+    list-style: none;
+    padding: 0;
+    display: block;
+}
+
+.skill-set {
+    width: max-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.5em;
+    column-gap: 1em;
+}
+
+.skill-set h3 {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: 7px 15px;
+    box-shadow: 5px 5px 5px rgba(0.0, 0.0, 0.0, 0.5);
+}
+
+@media (min-width: 800px) {
+    .skill-set {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2.2em;
+    }
+}
+
+/* Expertise Section Styles */
+
+.bar-skill {
+    max-width: 800px;
+    list-style: none;
+    margin-top: 80px;
+}
+
+.bar-skill li {
+    position: relative;
+    background: bisque;
+    height: 30px;
+    left: -25px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0.0, 0.0, 0.0, 0.5);
+}
+
+.bar-skill li+li {
+    margin-top: 2.2em;
+}
+
+.bar-skill em {
+    position: relative;
+    top: -30px;
+    left: 10px;
+    font-style: normal;
+}
+
+.bar-skill li span {
+    background-color: var(--clr-dark);
+    height: 30px;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.bar-skill li span:hover {
+    background-color: var(--clr-accent);
+}
+
+.java, .spring-boot {
+    width: 95%;
+}
+
+.javascript {
+    width: 80%;
+}
+
+.react {
+    width: 75%;
+}
+
+.python {
+    width: 80%;
+}
+
+.c {
+    width: 90%;
+}
+
+.html-css {
+    width: 90%;
+}
+
+.bootstrap {
+    width: 95%;
+}
+
+/* Project Section Styles */
+
+.project-section {
+    background-color: bisque;
+}
+
+.project-list {
+    display: grid;
+    column-gap: 1.5em;
+    row-gap: 3em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+
+.project {
+    height: 100%;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    max-width: 350px;
+    box-shadow: 5px 5px 25px rgba(0.0, 0.0, 0.0, 0.5);
+}
+
+.project:hover {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    max-width: 350px;
+    box-shadow: 10px 10px 50px rgba(0.0, 0.0, 0.0, 1.0);
+}
+
+.project+.project {
+    margin-top: 2em;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.project h3 {
+    color: var(--clr-accent);
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.project p {
+    padding: 0px 20px 20px 20px;
+}
+
+.project strong {
+    color: var(--clr-accent);
+}
+
+@media (min-width: 800px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .project+.project {
+        margin: 0;
+    }
+}
+
+/* Academic Section Styles */
+
+.academic-section {
+    padding-bottom: 80px;
+}
+
+.academic-section table {
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgba(0.0, 0.0, 0.0, 0.5);
+}
+
+.academic-section table tr, th, td {
+    border: 5px solid white;
+}
+
+.academic-section table th, td {
+    padding: 15px 30px;
+    word-spacing: 0.3rem;
+}
+
+.academic-section th {
+    background-color: bisque;
+}
+
+.academic-section td {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+@media (max-width: 800px) {
+    .optional {
+        display: none;
+    }
+
+    .academic-section table th, td {
+        padding: 15px;
+        word-spacing: 0.1rem;
+    }
+    
+}
+
+/* Inspiration Section Styles */
+
+.inspiration-section {
+    background-color: bisque;
+    padding-bottom: 100px;
+}
+
+.quote-box {
+    display: grid;
+    column-gap: 1.5em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+
+.quotes {
+    background-color: var(--clr-light);
+    max-width: 400px;
+    text-align: center;
+    padding: 15px 25px;
+    box-shadow: 0px 0px 25px rgba(0.0, 0.0, 0.0, 0.5);
+}
+
+.quotes+.quotes {
+    margin-top: 2em;
+}
+
+.quotes img {
+    width: 150px;
+    height: 150px;
+    margin: 15px 0 25px 0;
+}
+
+.quotes h3 {
+    margin: 0px 0px 20px 0px;
+}
+
+@media (min-width: 800px) {
+    .quote-box {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .quotes+.quotes {
+        margin: 0;
+    }
+}
+
+/* Footer Section Styles */
+
+.footer-section {
+    background-color: var(--clr-dark);
+}
+
+.footer-section a {
+    color: var(--clr-light);
+}
+
+.footer-section a:hover {
+    color: var(--clr-accent);
+}
+
+.footer-section a+a {
+    margin-left: 1em;
+}
+
+.footer-section p {
+    word-spacing: 0.2em;
+}
